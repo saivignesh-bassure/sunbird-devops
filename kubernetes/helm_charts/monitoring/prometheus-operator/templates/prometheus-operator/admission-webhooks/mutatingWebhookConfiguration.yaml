@@ -23,6 +23,7 @@ webhooks:
         operations:
           - CREATE
           - UPDATE
+    sideEffects: None
     clientConfig:
       service:
         namespace: {{ $.Release.Namespace }}

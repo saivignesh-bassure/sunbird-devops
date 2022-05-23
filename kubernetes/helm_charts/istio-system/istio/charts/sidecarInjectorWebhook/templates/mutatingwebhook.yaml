@@ -20,6 +20,7 @@ webhooks:
         apiGroups: [""]
         apiVersions: ["v1"]
         resources: ["pods"]
+    sideEffects: None
     failurePolicy: Fail
     namespaceSelector:
 {{- if .Values.enableNamespacesByDefault }}
