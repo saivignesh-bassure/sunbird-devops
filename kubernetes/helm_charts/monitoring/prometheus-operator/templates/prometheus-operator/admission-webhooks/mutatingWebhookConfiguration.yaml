@@ -8,6 +8,7 @@ metadata:
 {{- include "prometheus-operator.labels" $ | indent 4 }}
 webhooks:
   - name: prometheusrulemutate.monitoring.coreos.com
+    admissionReviewVersions: ["v1", "v1beta1"]
     {{- if .Values.prometheusOperator.admissionWebhooks.patch.enabled  }}
     failurePolicy: Ignore
     {{- else }}

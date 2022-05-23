@@ -9,6 +9,7 @@ metadata:
     release: {{ .Release.Name }}
 webhooks:
   - name: sidecar-injector.istio.io
+    sadmissionReviewVersions: ["v1", "v1beta1"]
     clientConfig:
       service:
         name: istio-sidecar-injector
