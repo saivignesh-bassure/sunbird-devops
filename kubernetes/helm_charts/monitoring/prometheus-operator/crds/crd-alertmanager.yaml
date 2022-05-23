@@ -1,4 +1,3 @@
-# https://raw.githubusercontent.com/coreos/prometheus-operator/release-0.38/example/prometheus-operator-crd/monitoring.coreos.com_alertmanagers.yaml
 {{- if and (not (.Values.reloader.watchGlobally)) (.Values.reloader.rbac.enabled) }}
 {{- if  (.Capabilities.APIVersions.Has "rbac.authorization.k8s.io/v1") }}
 apiVersion: rbac.authorization.k8s.io/v1
