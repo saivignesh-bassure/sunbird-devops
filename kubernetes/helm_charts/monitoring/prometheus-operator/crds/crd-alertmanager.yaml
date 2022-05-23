@@ -651,9 +651,9 @@ spec:
                   a pod.
                 properties:
                   args:
-                    description: 'Arguments to the entrypoint. The docker image''s
+                    description: 'Arguments to the entrypoint. The docker images
                       CMD is used if this is not provided. Variable references $(VAR_NAME)
-                      are expanded using the container''s environment. If a variable
+                      are expanded using the containers environment. If a variable
                       cannot be resolved, the reference in the input string will be
                       unchanged. The $(VAR_NAME) syntax can be escaped with a double
                       $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
@@ -664,8 +664,8 @@ spec:
                     type: array
                   command:
                     description: 'Entrypoint array. Not executed within a shell. The
-                      docker image''s ENTRYPOINT is used if this is not provided.
-                      Variable references $(VAR_NAME) are expanded using the container''s
+                      docker images ENTRYPOINT is used if this is not provided.
+                      Variable references $(VAR_NAME) are expanded using the containers
                       environment. If a variable cannot be resolved, the reference
                       in the input string will be unchanged. The $(VAR_NAME) syntax
                       can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references
@@ -929,10 +929,10 @@ spec:
                           such as liveness/startup probe failure, preemption, resource
                           contention, etc. The handler is not called if the container
                           crashes or exits. The reason for termination is passed to
-                          the handler. The Pod''s termination grace period countdown
+                          the handler. The Pods termination grace period countdown
                           begins before the PreStop hooked is executed. Regardless
                           of the outcome of the handler, the container will eventually
-                          terminate within the Pod''s termination grace period. Other
+                          terminate within the Pods termination grace period. Other
                           management of the container blocks until the hook completes
                           or until the termination grace period is reached. More info:
                           https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks'
@@ -1453,7 +1453,7 @@ spec:
                       this completes successfully. If this probe fails, the Pod will
                       be restarted, just as if the livenessProbe failed. This can
                       be used to provide different probe parameters at the beginning
-                      of a Pod''s lifecycle, when it might take a long time to load
+                      of a Pods lifecycle, when it might take a long time to load
                       data or warm a cache, than during steady-state operation. This
                       cannot be updated. This is an alpha feature enabled by the StartupProbe
                       feature flag. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes'
@@ -1587,8 +1587,8 @@ spec:
                       reads from stdin will never receive an EOF. Default is false
                     type: boolean
                   terminationMessagePath:
-                    description: 'Optional: Path at which the file to which the container''s
-                      termination message will be written is mounted into the container''s
+                    description: 'Optional: Path at which the file to which the containers
+                      termination message will be written is mounted into the containers
                       filesystem. Message written is intended to be brief final status,
                       such as an assertion failure message. Will be truncated by the
                       node if greater than 4096 bytes. The total message length across
@@ -1718,9 +1718,9 @@ spec:
                   a pod.
                 properties:
                   args:
-                    description: 'Arguments to the entrypoint. The docker image''s
+                    description: 'Arguments to the entrypoint. The docker images
                       CMD is used if this is not provided. Variable references $(VAR_NAME)
-                      are expanded using the container''s environment. If a variable
+                      are expanded using the containers environment. If a variable
                       cannot be resolved, the reference in the input string will be
                       unchanged. The $(VAR_NAME) syntax can be escaped with a double
                       $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
@@ -1731,8 +1731,8 @@ spec:
                     type: array
                   command:
                     description: 'Entrypoint array. Not executed within a shell. The
-                      docker image''s ENTRYPOINT is used if this is not provided.
-                      Variable references $(VAR_NAME) are expanded using the container''s
+                      docker images ENTRYPOINT is used if this is not provided.
+                      Variable references $(VAR_NAME) are expanded using the containers
                       environment. If a variable cannot be resolved, the reference
                       in the input string will be unchanged. The $(VAR_NAME) syntax
                       can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references
@@ -1996,10 +1996,10 @@ spec:
                           such as liveness/startup probe failure, preemption, resource
                           contention, etc. The handler is not called if the container
                           crashes or exits. The reason for termination is passed to
-                          the handler. The Pod''s termination grace period countdown
+                          the handler. The Pods termination grace period countdown
                           begins before the PreStop hooked is executed. Regardless
                           of the outcome of the handler, the container will eventually
-                          terminate within the Pod''s termination grace period. Other
+                          terminate within the Pods termination grace period. Other
                           management of the container blocks until the hook completes
                           or until the termination grace period is reached. More info:
                           https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks'
@@ -2520,7 +2520,7 @@ spec:
                       this completes successfully. If this probe fails, the Pod will
                       be restarted, just as if the livenessProbe failed. This can
                       be used to provide different probe parameters at the beginning
-                      of a Pod''s lifecycle, when it might take a long time to load
+                      of a Pods lifecycle, when it might take a long time to load
                       data or warm a cache, than during steady-state operation. This
                       cannot be updated. This is an alpha feature enabled by the StartupProbe
                       feature flag. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes'
@@ -2654,8 +2654,8 @@ spec:
                       reads from stdin will never receive an EOF. Default is false
                     type: boolean
                   terminationMessagePath:
-                    description: 'Optional: Path at which the file to which the container''s
-                      termination message will be written is mounted into the container''s
+                    description: 'Optional: Path at which the file to which the containers
+                      termination message will be written is mounted into the containers
                       filesystem. Message written is intended to be brief final status,
                       such as an assertion failure message. Will be truncated by the
                       node if greater than 4096 bytes. The total message length across
@@ -2975,7 +2975,7 @@ spec:
                   properties:
                     medium:
                       description: 'What type of storage medium should back this directory.
-                        The default is "" which means to use the node''s default medium.
+                        The default is "" which means to use the nodes default medium.
                         Must be an empty string (default) or Memory. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir'
                       type: string
                     sizeLimit:
@@ -3004,7 +3004,7 @@ spec:
                         More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
                       type: string
                     metadata:
-                      description: 'Standard object''s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata'
+                      description: 'Standard objects metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata'
                       type: object
                     spec:
                       description: 'Spec defines the desired characteristics of a
@@ -3283,7 +3283,7 @@ spec:
                 properties:
                   awsElasticBlockStore:
                     description: 'AWSElasticBlockStore represents an AWS Disk resource
-                      that is attached to a kubelet''s host machine and then exposed
+                      that is attached to a kubelets host machine and then exposed
                       to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore'
                     properties:
                       fsType:
@@ -3582,9 +3582,9 @@ spec:
                             path:
                               description: 'Required: Path is  the relative path name
                                 of the file to be created. Must not be absolute or
-                                contain the ''..'' path. Must be utf-8 encoded. The
+                                contain the .. path. Must be utf-8 encoded. The
                                 first item of the relative path must not start with
-                                ''..'''
+                                ..'
                               type: string
                             resourceFieldRef:
                               description: 'Selects a resource of the container: only
@@ -3612,11 +3612,11 @@ spec:
                     type: object
                   emptyDir:
                     description: 'EmptyDir represents a temporary directory that shares
-                      a pod''s lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir'
+                      a pods lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir'
                     properties:
                       medium:
                         description: 'What type of storage medium should back this
-                          directory. The default is "" which means to use the node''s
+                          directory. The default is "" which means to use the nodes
                           default medium. Must be an empty string (default) or Memory.
                           More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir'
                         type: string
@@ -3716,7 +3716,7 @@ spec:
                     type: object
                   gcePersistentDisk:
                     description: 'GCEPersistentDisk represents a GCE Disk resource
-                      that is attached to a kubelet''s host machine and then exposed
+                      that is attached to a kubelets host machine and then exposed
                       to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk'
                     properties:
                       fsType:
@@ -3752,7 +3752,7 @@ spec:
                       revision. DEPRECATED: GitRepo is deprecated. To provision a
                       container with a git repo, mount an EmptyDir into an InitContainer
                       that clones the repo using git, then mount the EmptyDir into
-                      the Pod''s container.'
+                      the Pods container.'
                     properties:
                       directory:
                         description: Target directory name. Must not contain or start
@@ -3772,7 +3772,7 @@ spec:
                     type: object
                   glusterfs:
                     description: 'Glusterfs represents a Glusterfs mount on the host
-                      that shares a pod''s lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md'
+                      that shares a pods lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md'
                     properties:
                       endpoints:
                         description: 'EndpointsName is the endpoint name that details
@@ -3814,7 +3814,7 @@ spec:
                     type: object
                   iscsi:
                     description: 'ISCSI represents an ISCSI Disk resource that is
-                      attached to a kubelet''s host machine and then exposed to the
+                      attached to a kubelets host machine and then exposed to the
                       pod. More info: https://examples.k8s.io/volumes/iscsi/README.md'
                     properties:
                       chapAuthDiscovery:
@@ -3879,12 +3879,12 @@ spec:
                     - targetPortal
                     type: object
                   name:
-                    description: 'Volume''s name. Must be a DNS_LABEL and unique within
+                    description: 'Volumes name. Must be a DNS_LABEL and unique within
                       the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'
                     type: string
                   nfs:
                     description: 'NFS represents an NFS mount on the host that shares
-                      a pod''s lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs'
+                      a pods lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs'
                     properties:
                       path:
                         description: 'Path that is exported by the NFS server. More
@@ -4070,9 +4070,9 @@ spec:
                                       path:
                                         description: 'Required: Path is  the relative
                                           path name of the file to be created. Must
-                                          not be absolute or contain the ''..'' path.
+                                          not be absolute or contain the .. path.
                                           Must be utf-8 encoded. The first item of
-                                          the relative path must not start with ''..'''
+                                          the relative path must not start with ..'
                                         type: string
                                       resourceFieldRef:
                                         description: 'Selects a resource of the container:
@@ -4225,7 +4225,7 @@ spec:
                     type: object
                   rbd:
                     description: 'RBD represents a Rados Block Device mount on the
-                      host that shares a pod''s lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md'
+                      host that shares a pods lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md'
                     properties:
                       fsType:
                         description: 'Filesystem type of the volume that you want
@@ -4383,7 +4383,7 @@ spec:
                           defined
                         type: boolean
                       secretName:
-                        description: 'Name of the secret in the pod''s namespace to
+                        description: 'Name of the secret in the pods namespace to
                           use. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret'
                         type: string
                     type: object
