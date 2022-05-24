@@ -16,4 +16,4 @@ spec:
     - name: ingress-internal
       port: 80
       targetPort: 80
-      nodePort: 31480
+      nodePort: 31680

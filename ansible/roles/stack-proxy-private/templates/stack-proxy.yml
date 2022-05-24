@@ -5,7 +5,7 @@ services:
     image: nginx
     # This is a workaround for remote ip address is not visible nginx
     ports:
-      - "31480:80"
+      - "31680:80"
     deploy:
       replicas: {{ private_proxy_replicas }}
       resources:
